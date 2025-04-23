@@ -13,15 +13,14 @@ def Sub():
     return 0
 
 MainFrame = fr(Menu)
-MainFrame.add_state("Sum", Sum)
-MainFrame.add_state("Sub", Sub)
+MainFrame.addState("Sum", Sum)
+MainFrame.addState("Sub", Sub)
 
-NextState = 0
-MainFrame.frame_update(NextState)
+next_state = 0
+MainFrame.frameUpdate(next_state)
 while True:
-    NextState = MainFrame.frame_func()
-    # print("Curr state : " + str(MainFrame.CurrState) + " NEXT:" + str(NextState))
+    next_state = MainFrame.frameFunc()
     q = input("Type q for exit: ")
     if q == 'q':
         break
-    MainFrame.frame_update(NextState)
+    MainFrame.frameUpdate(next_state)
