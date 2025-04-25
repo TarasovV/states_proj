@@ -17,10 +17,12 @@ MainFrame.addState("Sum", Sum)
 MainFrame.addState("Sub", Sub)
 
 next_state = 0
-MainFrame.frameUpdate(next_state)
+#MainFrame.frameUpdate(next_state)
+
 while True:
-    next_state = MainFrame.frameFunc()
+    #next_state = MainFrame.frameFunc()
+    next_state = MainFrame.frameUpdate(next_state)
     q = input("Type q for exit: ")
     if q == 'q':
         break
-    MainFrame.frameUpdate(next_state)
+

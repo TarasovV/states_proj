@@ -21,6 +21,7 @@ class frame:
 
     def frameUpdate(self, next_state_id = 0):
         self.curr_state = next_state_id
+        return self.frameFunc()
 
     def frameFunc(self):
         return States[int(self.curr_state)].start_func()
